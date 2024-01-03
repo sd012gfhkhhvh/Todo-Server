@@ -3,7 +3,7 @@ const app = express();
 const { createTodo, updateTodo, editTodo } = require('./types')
 const { todo } = require("./db");
 const cors = require('cors');
-const port = 3000;
+const port = process.env.PORT || 6010;
 
 app.use(express.json())
 app.use(cors())
